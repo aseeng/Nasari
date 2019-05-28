@@ -1,5 +1,6 @@
 import re
 import math
+import nltk
 from nltk.corpus import stopwords as sw
 
 stop_words = sw.words('english')
@@ -63,13 +64,20 @@ def weight(title, sentence):
     return math.sqrt(cardinality/sum)
 
 
-def printSentences(sentences, gradeOfReduction):
+def printSentences(propositions, sentences, gradeOfReduction):
+
+    summarizedText = []
     print(str(gradeOfReduction) + " %")
     numSentences = len(sentences) - (len(sentences) / 100 * gradeOfReduction)
+
     count = 0
     for sentence in sentences:
-        if count < numSentences:
-            print(sentence[0])
+        if count < int(numSentences):
+            summarizedText.append(sentence[0])
             count += 1
+
+    for p in propositions:
+        if p in summarizedText:
+            print(p)
 
     print()

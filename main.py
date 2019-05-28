@@ -2,6 +2,7 @@
 import operator
 import utils
 
+
 propositions = []
 with open("asset/The-Last-Man-on-the-Moon--Eugene-Cernan-gives-a-compelling-account.txt", encoding="utf8") as file:
     for line in file:
@@ -18,6 +19,6 @@ for sentence in propositions:
 
 sentences = sorted(sentenceWeights.items(), key=operator.itemgetter(1), reverse=True)
 
-utils.printSentences(sentences,10)
-utils.printSentences(sentences,20)
-utils.printSentences(sentences,30)
+utils.printSentences(propositions, sentences,10)
+utils.printSentences(propositions, sentences,20)
+utils.printSentences(propositions, sentences,30)
