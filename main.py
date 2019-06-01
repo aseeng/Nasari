@@ -4,7 +4,10 @@ import utils
 
 
 propositions = []
-with open("asset/The-Last-Man-on-the-Moon--Eugene-Cernan-gives-a-compelling-account.txt", encoding="utf8") as file:
+
+#with open("asset/People-Arent-Upgrading-Smartphones-as-Quickly-and-That-Is-Bad-for-Apple.txt", encoding="utf8") as file:
+with open("asset/Donald-Trump-vs-Barack-Obama-on-Nuclear-Weapons-in-East-Asia.txt", encoding="utf8") as file:
+#with open("asset/The-Last-Man-on-the-Moon--Eugene-Cernan-gives-a-compelling-account.txt", encoding="utf8") as file:
     for line in file:
         current = line[:-1]
         if not current.startswith("#"):
