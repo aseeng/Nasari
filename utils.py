@@ -61,7 +61,7 @@ def weight(title, sentence):
     for i in range(len(overlapping)):
         cardinality += 2 * i
 
-    return math.sqrt(cardinality/sum)
+    return cardinality/sum
 
 
 def printSentences(propositions, sentences, gradeOfReduction):
